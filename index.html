@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人教版三年级上册 · Unit 1 核心词汇与课文</title>
+<style>
+  :root{
+    --blue:#2f6fed;
+    --blue-soft:#eef4ff;
+    --orange:#ff8a3d;
+    --orange-deep:#e8590c;
+    --ink:#243b53;
+    --muted:#5b6b7c;
+    --line:#e6ecf5;
+    --card:#ffffff;
+    --yellow:#fff7df;
+    --yellow-line:#ffe3a3;
+    --radius:18px;
+    --shadow:0 6px 20px rgba(47,111,237,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC","Helvetica Neue",sans-serif;
+    background:linear-gradient(180deg,#eaf4ff 0%,#fff7ec 100%);
+    line-height:1.6;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 16px 56px}
+
+  /* 顶部横幅 */
+  .hero{
+    padding:34px 16px 26px;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(135deg,#2f6fed 0%,#5b8bff 55%,#ff9a5c 100%);
+    border-radius:0 0 28px 28px;
+    box-shadow:var(--shadow);
+  }
+  .hero .tag{
+    display:inline-block;
+    background:rgba(255,255,255,.22);
+    border:1px solid rgba(255,255,255,.45);
+    padding:4px 14px;
+    border-radius:999px;
+    font-size:.85rem;
+    letter-spacing:.04em;
+  }
+  .hero h1{margin:12px 0 4px;font-size:clamp(1.5rem,4.5vw,2.1rem);line-height:1.25}
+  .hero p{margin:0;font-size:clamp(.95rem,2.6vw,1.1rem);opacity:.95}
+
+  /* 锚点导航 */
+  .nav{
+    position:sticky;top:0;z-index:10;
+    display:flex;gap:8px;
+    padding:10px 14px;
+    overflow-x:auto;
+    white-space:nowrap;
+    background:rgba(255,255,255,.86);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    -webkit-overflow-scrolling:touch;
+  }
+  .nav a{
+    color:var(--blue);
+    text-decoration:none;
+    background:#fff;
+    border:1px solid #dbe6fb;
+    padding:7px 13px;
+    border-radius:999px;
+    font-size:.92rem;
+    font-weight:600;
+    flex:0 0 auto;
+  }
+  .nav a:hover,.nav a:focus{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+  main{padding-top:26px}
+
+  /* 课程区块 */
+  .lesson{margin:0 0 52px;scroll-margin-top:72px}
+  .lesson-head{
+    display:flex;align-items:center;gap:12px;margin:0 0 16px;
+  }
+  .lesson-head .num{
+    flex:0 0 auto;
+    width:44px;height:44px;
+    display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--orange),#ffb45c);
+    color:#fff;font-weight:800;font-size:1.3rem;
+    border-radius:14px;
+    box-shadow:0 6px 14px rgba(255,138,61,.35);
+  }
+  .lesson-head h2{margin:0;font-size:clamp(1.35rem,3.8vw,1.7rem);line-height:1.3}
+
+  .block{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:18px 18px 20px;
+    margin:0 0 18px;
+  }
+  .block-label{
+    display:inline-block;
+    font-size:.8rem;font-weight:800;letter-spacing:.08em;
+    color:#fff;
+    background:var(--blue);
+    padding:4px 12px;border-radius:999px;margin-bottom:12px;
+  }
+  .text-block{background:var(--blue-soft);border-left:6px solid var(--blue)}
+  .text-block .block-label{background:var(--blue)}
+  .text-block p{
+    margin:8px 0;padding:9px 12px;
+    background:#fff;border-radius:12px;
+    font-size:1.18rem;line-height:1.7;
+    box-shadow:0 1px 0 #e4edfb;
+  }
+  .audio-block{background:#fff}
+  .audio-block .block-label{background:var(--orange)}
+  .audio-block audio{width:100%;max-width:400px;display:block;margin-top:4px}
+
+  .know-block{background:var(--yellow);border-left:6px solid var(--orange)}
+  .know-block .block-label{background:var(--orange)}
+  .know-block ul{margin:0;padding-left:0;list-style:none}
+  .know-block li{
+    position:relative;
+    padding:8px 0 8px 26px;
+    font-size:1.05rem;
+    border-bottom:1px dashed var(--yellow-line);
+  }
+  .know-block li:last-child{border-bottom:0}
+  .know-block li::before{
+    content:"★";position:absolute;left:0;top:8px;color:var(--orange);
+  }
+  strong{
+    font-weight:800;
+    color:var(--orange-deep);
+    background:#fff3bf;
+    padding:0 3px;border-radius:4px;
+  }
+
+  /* 词汇区 */
+  .section-title{
+    margin:58px 0 18px;
+    text-align:center;
+    scroll-margin-top:72px;
+  }
+  .section-title h2{
+    margin:0;
+    font-size:clamp(1.45rem,4.2vw,1.9rem);
+    color:var(--blue);
+  }
+  .section-title p{margin:6px 0 0;color:var(--muted);font-size:.95rem}
+  .word-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+    gap:14px;
+  }
+  .word-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:14px 12px;
+    text-align:center;
+    box-shadow:var(--shadow);
+  }
+  .word-card .emoji{font-size:2.7rem;line-height:1.1}
+  .word-card .w{font-size:1.45rem;font-weight:800;margin-top:6px}
+  .word-card .m{font-size:.95rem;color:var(--muted);margin-top:2px}
+  .word-card audio{width:100%;max-width:200px;margin-top:10px;height:34px}
+  .word-card .ext{
+    margin-top:10px;padding-top:8px;border-top:1px dashed var(--line);
+    font-size:.85rem;color:var(--ink);text-align:left;line-height:1.5;
+  }
+  .word-card.simple .w{margin-top:10px}
+
+  /* 句型汇总 */
+  .review{
+    margin-top:58px;scroll-margin-top:72px;
+    background:linear-gradient(135deg,#fff7df,#ffe9c9);
+    border:1px solid var(--yellow-line);
+    border-radius:22px;
+    padding:22px 20px 26px;
+  }
+  .review h2{margin:0 0 14px;text-align:center;color:var(--orange-deep);font-size:clamp(1.4rem,4vw,1.8rem)}
+  .review ol{margin:0;padding:0;list-style:none}
+  .review li{
+    background:rgba(255,255,255,.75);
+    border-radius:12px;
+    padding:11px 14px;
+    margin:0 0 10px;
+    font-size:1.02rem;
+  }
+  .review li::before{content:""}
+
+  footer{
+    text-align:center;color:var(--muted);font-size:.85rem;
+    padding:26px 16px 34px;
+  }
+
+  @media (min-width:720px){
+    .word-grid{grid-template-columns:repeat(4,1fr)}
+    .review ol{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .review li{margin:0}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="tag">人教版 · 三年级上册</span>
+  <h1>Unit 1 · Hello!</h1>
+  <p>第一单元 · 打招呼、自我介绍与问候</p>
+</header>
+
+<nav class="nav" aria-label="页面导航">
+  <a href="#lesson1">第 1 课</a>
+  <a href="#lesson2">第 2 课</a>
+  <a href="#lesson3">第 3 课</a>
+  <a href="#lesson4">第 4 课</a>
+  <a href="#words">词汇表</a>
+  <a href="#review">句型汇总</a>
+</nav>
+
+<main class="wrap">
+
+  <!-- 第 1 课 -->
+  <section class="lesson" id="lesson1">
+    <div class="lesson-head"><span class="num">1</span><h2>第 1 课 Hello!</h2></div>
+
+    <div class="block text-block">
+      <span class="block-label">课文文本</span>
+      <p>Hi! I am Jenny.</p>
+      <p>Hello! I am Li Ming.</p>
+      <p>Hi! I am Danny.</p>
+      <p>Hello! I'm Danny.</p>
+      <p>What's your name?</p>
+      <p>Hello! I'm Li Ming.</p>
+      <p>What's your name?</p>
+      <p>Hi! My name is Li Ming.</p>
+      <p>Hi! My name is Jenny.</p>
+    </div>
+
+    <div class="block audio-block">
+      <span class="block-label">课文音频</span>
+      <audio controls preload="metadata">
+        <source src="assets/audio/lessons/lesson1.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="block know-block">
+      <span class="block-label">【本课知识点】</span>
+      <ul>
+        <li><strong>my name</strong> 我的名字；<strong>your name</strong> 你的名字</li>
+        <li><strong>What's</strong> = <strong>What is</strong>（缩写）</li>
+        <li>问：<strong>What's your name?</strong> 你叫什么名字？</li>
+        <li>答：<strong>My name is</strong> ××. 我叫××。</li>
+        <li><strong>Hello! / Hi!</strong> 都表示“你好”，<strong>Hi</strong> 更随意。</li>
+        <li><strong>I'm</strong> = <strong>I am</strong>（缩写），“我是”。</li>
+        <li>自我介绍：<strong>I'm</strong> + 名字 / <strong>My name is</strong> + 名字。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 第 2 课 -->
+  <section class="lesson" id="lesson2">
+    <div class="lesson-head"><span class="num">2</span><h2>第 2 课 How are you?</h2></div>
+
+    <div class="block text-block">
+      <span class="block-label">课文文本</span>
+      <p>Hi! How are you?</p>
+      <p>I'm fine.</p>
+      <p>I'm fine, thanks.</p>
+      <p>Goodbye!</p>
+      <p>Bye. See you later!</p>
+    </div>
+
+    <div class="block audio-block">
+      <span class="block-label">课文音频</span>
+      <audio controls preload="metadata">
+        <source src="assets/audio/lessons/lesson2.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="block know-block">
+      <span class="block-label">【本课知识点】</span>
+      <ul>
+        <li><strong>how</strong> 怎样，如何；<strong>How are you?</strong> 你好吗？</li>
+        <li>回答：<strong>I'm fine.</strong> 或 <strong>Fine.</strong> 我很好。</li>
+        <li><strong>How are you?</strong> = <strong>And you?</strong> 你呢？（反问）</li>
+        <li><strong>thanks</strong> = <strong>thank you</strong> 谢谢你</li>
+        <li><strong>see</strong> 看见，看到；<strong>later</strong> 一会儿；<strong>See you later.</strong> 再见，一会儿见。</li>
+        <li>问候与回答：—<strong>How are you?</strong> —<strong>I'm fine, thanks.</strong></li>
+        <li><strong>Goodbye!</strong> 再见（正式）/ <strong>Bye!</strong> 再见（口语）。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 第 3 课 -->
+  <section class="lesson" id="lesson3">
+    <div class="lesson-head"><span class="num">3</span><h2>第 3 课 Good morning!</h2></div>
+
+    <div class="block text-block">
+      <span class="block-label">课文文本</span>
+      <p>Good morning, boys and girls!</p>
+      <p>Good morning, Miss Zhang!</p>
+      <p>Let's play.</p>
+      <p>Hooray!</p>
+      <p>Good job!</p>
+      <p>Thank you!</p>
+      <p>Goodbye!</p>
+      <p>Bye!</p>
+    </div>
+
+    <div class="block audio-block">
+      <span class="block-label">课文音频</span>
+      <audio controls preload="metadata">
+        <source src="assets/audio/lessons/lesson3.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="block know-block">
+      <span class="block-label">【本课知识点】</span>
+      <ul>
+        <li>—<strong>Good morning!</strong> 早上好！ 答：—<strong>Good morning!</strong></li>
+        <li><strong>Miss</strong> 小姐（未婚）/ <strong>Mrs.</strong> 夫人、太太（已婚）/ <strong>Ms.</strong> 女士</li>
+        <li><strong>Let's</strong> = <strong>Let us</strong>（缩写）让我们</li>
+        <li><strong>job</strong> 工作；<strong>Good job!</strong> 做得好！</li>
+        <li>早晨/上午问候用 <strong>Good morning</strong>，回答相同。</li>
+        <li><strong>Thank you!</strong> = <strong>Thanks!</strong> 谢谢。</li>
+        <li>对女老师可称呼：<strong>Miss / Mrs. / Ms. + 姓</strong>。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 第 4 课 -->
+  <section class="lesson" id="lesson4">
+    <div class="lesson-head"><span class="num">4</span><h2>第 4 课 Nice to meet you.</h2></div>
+
+    <div class="block text-block">
+      <span class="block-label">课文文本</span>
+      <p>Hi! I'm Jenny. What's your name?</p>
+      <p>My name is Guo Yang. Nice to meet you.</p>
+      <p>Nice to meet you, too.</p>
+      <p>I'm Guo Yang. Nice to meet you.</p>
+      <p>I'm Danny. Nice to meet you, too.</p>
+    </div>
+
+    <div class="block audio-block">
+      <span class="block-label">课文音频</span>
+      <audio controls preload="metadata">
+        <source src="assets/audio/lessons/lesson4.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="block know-block">
+      <span class="block-label">【本课知识点】</span>
+      <ul>
+        <li><strong>Nice to meet you.</strong> 见到你很高兴。</li>
+        <li>回答：<strong>Nice to meet you, too.</strong> / <strong>Glad to meet you, too.</strong></li>
+        <li><strong>too</strong> 表示“也”，放在句末。</li>
+        <li>复习：<strong>Hello! / Hi!</strong>、<strong>Good morning!</strong>、<strong>Goodbye! / Bye!</strong></li>
+        <li>自我介绍：<strong>I'm…</strong> / <strong>My name is…</strong></li>
+        <li>问候：—<strong>How are you?</strong> —<strong>I'm fine.</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 词汇表 -->
+  <section class="section-title" id="words">
+    <h2>Unit1 核心词汇</h2>
+    <p>重要单词含真人美音发音与配图，简单单词只记单词和释义</p>
+  </section>
+
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="emoji">👋</div>
+      <div class="w">hello</div>
+      <div class="m">喂；你好</div>
+      <audio controls preload="metadata"><source src="assets/audio/words/hello.mp3" type="audio/mpeg"></audio>
+      <div class="ext">打招呼用语，见面对人说 <strong>Hello!</strong></div>
+    </div>
+    <div class="word-card">
+      <div class="emoji">🙋</div>
+      <div class="w">hi</div>
+      <div class="m">嗨；你好</div>
+      <audio controls preload="metadata"><source src="assets/audio/words/hi.mp3" type="audio/mpeg"></audio>
+      <div class="ext">比 Hello 更随意，常说 <strong>Hi!</strong></div>
+    </div>
+    <div class="word-card">
+      <div class="emoji">📛</div>
+      <div class="w">name</div>
+      <div class="m">名字</div>
+      <audio controls preload="metadata"><source src="assets/audio/words/name.mp3" type="audio/mpeg"></audio>
+      <div class="ext"><strong>What's your name?</strong> <strong>My name is…</strong></div>
+    </div>
+    <div class="word-card">
+      <div class="emoji">😊</div>
+      <div class="w">fine</div>
+      <div class="m">健康的</div>
+      <audio controls preload="metadata"><source src="assets/audio/words/fine.mp3" type="audio/mpeg"></audio>
+      <div class="ext"><strong>I'm fine.</strong> 我很好。</div>
+    </div>
+    <div class="word-card">
+      <div class="emoji">🌅</div>
+      <div class="w">morning</div>
+      <div class="m">早晨；上午</div>
+      <audio controls preload="metadata"><source src="assets/audio/words/morning.mp3" type="audio/mpeg"></audio>
+      <div class="ext"><strong>Good morning!</strong> 早上好！</div>
+    </div>
+    <div class="word-card">
+      <div class="emoji">🙏</div>
+      <div class="w">thank</div>
+      <div class="m">谢谢，感谢</div>
+      <audio controls preload="metadata"><source src="assets/audio/words/thank.mp3" type="audio/mpeg"></audio>
+      <div class="ext"><strong>Thank you!</strong> = <strong>Thanks!</strong></div>
+    </div>
+    <div class="word-card">
+      <div class="emoji">🤗</div>
+      <div class="w">nice</div>
+      <div class="m">令人愉快的</div>
+      <audio controls preload="metadata"><source src="assets/audio/words/nice.mp3" type="audio/mpeg"></audio>
+      <div class="ext"><strong>Nice to meet you.</strong> 见到你很高兴。</div>
+    </div>
+    <div class="word-card">
+      <div class="emoji">🤝</div>
+      <div class="w">meet</div>
+      <div class="m">遇见</div>
+      <audio controls preload="metadata"><source src="assets/audio/words/meet.mp3" type="audio/mpeg"></audio>
+      <div class="ext"><strong>Nice to meet you, too.</strong></div>
+    </div>
+    <div class="word-card simple">
+      <div class="w">I</div>
+      <div class="m">我</div>
+    </div>
+    <div class="word-card simple">
+      <div class="w">goodbye</div>
+      <div class="m">再见</div>
+    </div>
+    <div class="word-card simple">
+      <div class="w">bye</div>
+      <div class="m">再见</div>
+    </div>
+  </div>
+
+  <!-- 句型汇总 -->
+  <section class="review" id="review">
+    <h2>本单元重点句型汇总</h2>
+    <ol>
+      <li>打招呼：<strong>Hello! / Hi!</strong> 你好！</li>
+      <li>早上好：<strong>Good morning!</strong> — <strong>Good morning!</strong></li>
+      <li>问候：<strong>How are you?</strong> — <strong>I'm fine, thanks.</strong> / <strong>Fine.</strong></li>
+      <li>反问对方：<strong>How are you?</strong> = <strong>And you?</strong> 你呢？</li>
+      <li>问名字：<strong>What's your name?</strong> — <strong>My name is ××.</strong> / <strong>I'm ××.</strong></li>
+      <li>初次见面：<strong>Nice to meet you.</strong> — <strong>Nice to meet you, too.</strong></li>
+      <li>道别：<strong>Goodbye! / Bye!</strong> / <strong>See you later!</strong></li>
+      <li>表扬与感谢：<strong>Good job!</strong> — <strong>Thank you! / Thanks!</strong></li>
+    </ol>
+  </section>
+
+  <footer>人教版三年级上册 · Unit 1 英语学习页</footer>
+</main>
+</body>
+</html>
